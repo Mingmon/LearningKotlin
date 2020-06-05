@@ -39,6 +39,8 @@ public class GameFragmentDirections {
       if (arguments.containsKey("score")) {
         int score = (int) arguments.get("score");
         __result.putInt("score", score);
+      } else {
+        __result.putInt("score", 0);
       }
       return __result;
     }

@@ -21,12 +21,15 @@ public final class GameFragment extends androidx.fragment.app.Fragment {
     }
     
     /**
-     * Methods for button click handlers
+     * Methods for buttons presses
      */
     private final void onSkip() {
     }
     
     private final void onCorrect() {
+    }
+    
+    private final void onEndGame() {
     }
     
     /**
@@ -38,10 +41,10 @@ public final class GameFragment extends androidx.fragment.app.Fragment {
     private final void updateScoreText() {
     }
     
+    /**
+     * Called when the game is finished
+     */
     private final void gameFinished() {
-    }
-    
-    private final void onEndGame() {
     }
     
     public GameFragment() {

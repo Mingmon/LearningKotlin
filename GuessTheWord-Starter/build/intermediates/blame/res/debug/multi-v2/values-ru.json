@@ -4,7 +4,24 @@
             "outputFile": "C:\\Users\\Mingmon\\AndroidStudioProjects\\kotlinn\\GuessTheWord-Starter\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru\\values-ru.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Mingmon\\.gradle\\caches\\transforms-2\\files-2.1\\0bc9b092578b4614bfe703e76793583f\\appcompat-1.0.2\\res\\values-ru\\values-ru.xml",
+                    "source": "C:\\Users\\Mingmon\\.gradle\\caches\\transforms-2\\files-2.1\\f86193ec792c2c91faaceb4cee91b9a1\\navigation-ui-2.0.0\\res\\values-ru\\values-ru.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,163",
+                        "endColumns": "107,118",
+                        "endOffsets": "158,277"
+                    },
+                    "to": {
+                        "startLines": "29,30",
+                        "startColumns": "4,4",
+                        "startOffsets": "2832,2940",
+                        "endColumns": "107,118",
+                        "endOffsets": "2935,3054"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Mingmon\\.gradle\\caches\\transforms-2\\files-2.1\\5046bec950ac7c7eb68022b9460e2f0d\\appcompat-1.0.2\\res\\values-ru\\values-ru.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Mingmon\\.gradle\\caches\\transforms-2\\files-2.1\\9c2664bb709f740602cd228330258a5d\\core-1.0.1\\res\\values-ru\\values-ru.xml",
+                    "source": "C:\\Users\\Mingmon\\.gradle\\caches\\transforms-2\\files-2.1\\ab6354fa67aa19f8c52cd1a3ab63ba9d\\core-1.0.1\\res\\values-ru\\values-ru.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -35,23 +52,6 @@
                         "startOffsets": "3140",
                         "endColumns": "100",
                         "endOffsets": "3236"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Mingmon\\.gradle\\caches\\transforms-2\\files-2.1\\639943c4cca13318f8d1f0f1b58948e3\\navigation-ui-2.0.0\\res\\values-ru\\values-ru.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,163",
-                        "endColumns": "107,118",
-                        "endOffsets": "158,277"
-                    },
-                    "to": {
-                        "startLines": "29,30",
-                        "startColumns": "4,4",
-                        "startOffsets": "2832,2940",
-                        "endColumns": "107,118",
-                        "endOffsets": "2935,3054"
                     }
                 }
             ]
