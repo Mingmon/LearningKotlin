@@ -1,5 +1,5 @@
 rootProject.name='kotlinn'
-include ':aboutme', ':AndroidTriviaNavigation', ':DessertClicker-Starter'
+include ':aboutme', ':AndroidTriviaNavigation', ':DessertClicker-Starter', ':DessertClickerLogs'
 include ':colormyviews'
 include ':AndroidTrivia-Starter'
 include ':AndroidTriviaFragment'
