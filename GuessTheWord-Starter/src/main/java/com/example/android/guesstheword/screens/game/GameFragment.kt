@@ -43,6 +43,7 @@ class GameFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
 
         // Inflate view and obtain an instance of the binding class
+
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.game_fragment,
@@ -54,38 +55,41 @@ class GameFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
 
         /** Setting up LiveData observation relationship **/
-        viewModel.word.observe(viewLifecycleOwner, Observer { newWord ->
-            binding.wordText.text = newWord
-        })
+//        viewModel.word.observe(viewLifecycleOwner, Observer { newWord ->
+//            binding.wordText.text = newWord
+//        })
 
-        viewModel.score.observe(viewLifecycleOwner, Observer { newScore ->
-            binding.scoreText.text = newScore.toString()
+//        viewModel.score.observe(viewLifecycleOwner, Observer { newScore ->
+//            binding.scoreText.text = newScore.toString()
+//
+//        })
 
-        })
+        binding.gameViewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
 
         // Observer for the Game finished event
         viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer<Boolean> { hasFinished ->
             if (hasFinished) gameFinished()
         })
 
-        binding.correctButton.setOnClickListener { onCorrect() }
-        binding.skipButton.setOnClickListener { onSkip() }
-        binding.endGameButton.setOnClickListener { onEndGame() }
+//        binding.correctButton.setOnClickListener { onCorrect() }
+//        binding.skipButton.setOnClickListener { onSkip() }
+//        binding.endGameButton.setOnClickListener { onEndGame() }
         return binding.root
     }
 
 
     /** Methods for buttons presses **/
 
-    private fun onSkip() {
-        viewModel.onSkip()
-    }
-    private fun onCorrect() {
-        viewModel.onCorrect()
-    }
-    private fun onEndGame() {
-        gameFinished()
-    }
+//    private fun onSkip() {
+//        viewModel.onSkip()
+//    }
+//    private fun onCorrect() {
+//        viewModel.onCorrect()
+//    }
+//    private fun onEndGame() {
+//        gameFinished()
+//    }
 
     private fun gameFinished() {
         Toast.makeText(activity, "Game has just finished", Toast.LENGTH_SHORT).show()

@@ -32,7 +32,7 @@
 28        android:allowBackup="true"
 28-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\DessertClickerLogs\src\main\AndroidManifest.xml:22:9-35
 29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-29-->[androidx.core:core:1.0.0] C:\Users\Mingmon\.gradle\caches\transforms-2\files-2.1\a25f884e67f2c9f46667818dd24e5f0b\core-1.0.0\AndroidManifest.xml:22:18-86
+29-->[androidx.core:core:1.0.0] C:\Users\Mingmon\.gradle\caches\transforms-2\files-2.1\b2801fd08c9a00f47421aa1a6a0bf531\core-1.0.0\AndroidManifest.xml:22:18-86
 30        android:debuggable="true"
 31        android:icon="@mipmap/ic_dessert_clicker"
 31-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\DessertClickerLogs\src\main\AndroidManifest.xml:23:9-50
