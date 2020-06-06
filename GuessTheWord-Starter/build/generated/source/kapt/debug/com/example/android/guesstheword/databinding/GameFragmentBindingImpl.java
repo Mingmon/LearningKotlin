@@ -14,8 +14,7 @@ public class GameFragmentBindingImpl extends GameFragmentBinding implements com.
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.word_is_text, 6);
-        sViewsWithIds.put(R.id.timer_text, 7);
+        sViewsWithIds.put(R.id.word_is_text, 7);
         sViewsWithIds.put(R.id.guideline, 8);
     }
     // views
@@ -34,15 +33,15 @@ public class GameFragmentBindingImpl extends GameFragmentBinding implements com.
         this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
     }
     private GameFragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 2
-            , (android.widget.Button) bindings[4]
+        super(bindingComponent, root, 3
             , (android.widget.Button) bindings[5]
+            , (android.widget.Button) bindings[6]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
             , (androidx.constraintlayout.widget.Guideline) bindings[8]
+            , (android.widget.TextView) bindings[3]
+            , (android.widget.Button) bindings[4]
             , (android.widget.TextView) bindings[2]
-            , (android.widget.Button) bindings[3]
             , (android.widget.TextView) bindings[7]
-            , (android.widget.TextView) bindings[6]
             , (android.widget.TextView) bindings[1]
             );
         this.correctButton.setTag(null);
@@ -50,6 +49,7 @@ public class GameFragmentBindingImpl extends GameFragmentBinding implements com.
         this.gameLayout.setTag(null);
         this.scoreText.setTag(null);
         this.skipButton.setTag(null);
+        this.timerText.setTag(null);
         this.wordText.setTag(null);
         setRootTag(root);
         // listeners
@@ -62,7 +62,7 @@ public class GameFragmentBindingImpl extends GameFragmentBinding implements com.
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x8L;
+                mDirtyFlags = 0x10L;
         }
         requestRebind();
     }
@@ -92,7 +92,7 @@ public class GameFragmentBindingImpl extends GameFragmentBinding implements com.
     public void setGameViewModel(@Nullable com.example.android.guesstheword.screens.game.GameViewModel GameViewModel) {
         this.mGameViewModel = GameViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x4L;
+            mDirtyFlags |= 0x8L;
         }
         notifyPropertyChanged(BR.gameViewModel);
         super.requestRebind();
@@ -104,6 +104,8 @@ public class GameFragmentBindingImpl extends GameFragmentBinding implements com.
             case 0 :
                 return onChangeGameViewModelScore((androidx.lifecycle.LiveData<java.lang.Integer>) object, fieldId);
             case 1 :
+                return onChangeGameViewModelCurrentTimeString((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+            case 2 :
                 return onChangeGameViewModelWord((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
         }
         return false;
@@ -117,10 +119,19 @@ public class GameFragmentBindingImpl extends GameFragmentBinding implements com.
         }
         return false;
     }
-    private boolean onChangeGameViewModelWord(androidx.lifecycle.LiveData<java.lang.String> GameViewModelWord, int fieldId) {
+    private boolean onChangeGameViewModelCurrentTimeString(androidx.lifecycle.LiveData<java.lang.String> GameViewModelCurrentTimeString, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeGameViewModelWord(androidx.lifecycle.LiveData<java.lang.String> GameViewModelWord, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
             }
             return true;
         }
@@ -135,17 +146,19 @@ public class GameFragmentBindingImpl extends GameFragmentBinding implements com.
             mDirtyFlags = 0;
         }
         androidx.lifecycle.LiveData<java.lang.Integer> gameViewModelScore = null;
+        java.lang.String gameViewModelCurrentTimeStringGetValue = null;
         java.lang.String wordTextAndroidStringQuoteFormatGameViewModelWord = null;
         java.lang.String gameViewModelWordGetValue = null;
         java.lang.String scoreTextAndroidStringScoreFormatGameViewModelScore = null;
         java.lang.Integer gameViewModelScoreGetValue = null;
         com.example.android.guesstheword.screens.game.GameViewModel gameViewModel = mGameViewModel;
+        androidx.lifecycle.LiveData<java.lang.String> gameViewModelCurrentTimeString = null;
         androidx.lifecycle.LiveData<java.lang.String> gameViewModelWord = null;
 
-        if ((dirtyFlags & 0xfL) != 0) {
+        if ((dirtyFlags & 0x1fL) != 0) {
 
 
-            if ((dirtyFlags & 0xdL) != 0) {
+            if ((dirtyFlags & 0x19L) != 0) {
 
                     if (gameViewModel != null) {
                         // read gameViewModel.score
@@ -163,13 +176,27 @@ public class GameFragmentBindingImpl extends GameFragmentBinding implements com.
                     // read @android:string/score_format
                     scoreTextAndroidStringScoreFormatGameViewModelScore = scoreText.getResources().getString(R.string.score_format, gameViewModelScoreGetValue);
             }
-            if ((dirtyFlags & 0xeL) != 0) {
+            if ((dirtyFlags & 0x1aL) != 0) {
+
+                    if (gameViewModel != null) {
+                        // read gameViewModel.currentTimeString
+                        gameViewModelCurrentTimeString = gameViewModel.getCurrentTimeString();
+                    }
+                    updateLiveDataRegistration(1, gameViewModelCurrentTimeString);
+
+
+                    if (gameViewModelCurrentTimeString != null) {
+                        // read gameViewModel.currentTimeString.getValue()
+                        gameViewModelCurrentTimeStringGetValue = gameViewModelCurrentTimeString.getValue();
+                    }
+            }
+            if ((dirtyFlags & 0x1cL) != 0) {
 
                     if (gameViewModel != null) {
                         // read gameViewModel.word
                         gameViewModelWord = gameViewModel.getWord();
                     }
-                    updateLiveDataRegistration(1, gameViewModelWord);
+                    updateLiveDataRegistration(2, gameViewModelWord);
 
 
                     if (gameViewModelWord != null) {
@@ -183,19 +210,24 @@ public class GameFragmentBindingImpl extends GameFragmentBinding implements com.
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x8L) != 0) {
+        if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
             this.correctButton.setOnClickListener(mCallback3);
             this.endGameButton.setOnClickListener(mCallback4);
             this.skipButton.setOnClickListener(mCallback2);
         }
-        if ((dirtyFlags & 0xdL) != 0) {
+        if ((dirtyFlags & 0x19L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.scoreText, scoreTextAndroidStringScoreFormatGameViewModelScore);
         }
-        if ((dirtyFlags & 0xeL) != 0) {
+        if ((dirtyFlags & 0x1aL) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.timerText, gameViewModelCurrentTimeStringGetValue);
+        }
+        if ((dirtyFlags & 0x1cL) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.wordText, wordTextAndroidStringQuoteFormatGameViewModelWord);
@@ -262,9 +294,10 @@ public class GameFragmentBindingImpl extends GameFragmentBinding implements com.
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): gameViewModel.score
-        flag 1 (0x2L): gameViewModel.word
-        flag 2 (0x3L): gameViewModel
-        flag 3 (0x4L): null
+        flag 1 (0x2L): gameViewModel.currentTimeString
+        flag 2 (0x3L): gameViewModel.word
+        flag 3 (0x4L): gameViewModel
+        flag 4 (0x5L): null
     flag mapping end*/
     //end
 }
