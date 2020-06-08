@@ -5,13 +5,57 @@ import java.lang.System;
 /**
  * ViewModel for SleepTrackerFragment.
  */
-@kotlin.Metadata(mv = {1, 1, 16}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\f\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0011\u0010\u0018\u001a\u00020\u0019H\u0086@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\u001aJ\u0013\u0010\u001b\u001a\u0004\u0018\u00010\fH\u0082@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\u001aJ\b\u0010\u001c\u001a\u00020\u0019H\u0002J\u0019\u0010\u001d\u001a\u00020\u00192\u0006\u0010\u001e\u001a\u00020\fH\u0082@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\u001fJ\u0006\u0010 \u001a\u00020\u0019J\b\u0010!\u001a\u00020\u0019H\u0014J\u0006\u0010\"\u001a\u00020\u0019J\u0006\u0010#\u001a\u00020\u0019J\u0019\u0010$\u001a\u00020\u00192\u0006\u0010\u001e\u001a\u00020\fH\u0082@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\u001fR\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u001a\u0010\t\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\f0\u000b0\nX\u0082\u0004\u00a2\u0006\u0002\n\u0000R5\u0010\r\u001a&\u0012\f\u0012\n \u000f*\u0004\u0018\u00010\u000e0\u000e \u000f*\u0012\u0012\f\u0012\n \u000f*\u0004\u0018\u00010\u000e0\u000e\u0018\u00010\n0\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\u0011R\u0016\u0010\u0012\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\f0\u0013X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0017X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u0082\u0002\u0004\n\u0002\b\u0019\u00a8\u0006%"}, d2 = {"Lcom/example/android/trackmysleepquality/sleeptracker/SleepTrackerViewModel;", "Landroidx/lifecycle/AndroidViewModel;", "database", "Lcom/example/android/trackmysleepquality/database/SleepDatabaseDao;", "application", "Landroid/app/Application;", "(Lcom/example/android/trackmysleepquality/database/SleepDatabaseDao;Landroid/app/Application;)V", "getDatabase", "()Lcom/example/android/trackmysleepquality/database/SleepDatabaseDao;", "nights", "Landroidx/lifecycle/LiveData;", "", "Lcom/example/android/trackmysleepquality/database/SleepNight;", "nightsString", "Landroid/text/Spanned;", "kotlin.jvm.PlatformType", "getNightsString", "()Landroidx/lifecycle/LiveData;", "tonight", "Landroidx/lifecycle/MutableLiveData;", "uiScope", "Lkotlinx/coroutines/CoroutineScope;", "viewModelJob", "Lkotlinx/coroutines/Job;", "clear", "", "(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "getTonightFromDatabase", "initializeTonight", "insert", "night", "(Lcom/example/android/trackmysleepquality/database/SleepNight;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "onClear", "onCleared", "onStartTracking", "onStopTracking", "update", "TrackMySleepQualityCoroutines-Starter_debug"})
+@kotlin.Metadata(mv = {1, 1, 16}, bv = {1, 0, 3}, k = 1, d1 = {"\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010 \n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u000e\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0011\u0010%\u001a\u00020&H\u0082@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\'J\u0006\u0010(\u001a\u00020&J\u0006\u0010)\u001a\u00020&J\u0013\u0010*\u001a\u0004\u0018\u00010\tH\u0082@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\'J\b\u0010+\u001a\u00020&H\u0002J\u0019\u0010,\u001a\u00020&2\u0006\u0010-\u001a\u00020\tH\u0082@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010.J\u0006\u0010/\u001a\u00020&J\b\u00100\u001a\u00020&H\u0014J\u0006\u00101\u001a\u00020&J\u0006\u00102\u001a\u00020&J\u0019\u00103\u001a\u00020&2\u0006\u0010-\u001a\u00020\tH\u0082@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010.R\u0014\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\t0\bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\n\u001a\b\u0012\u0004\u0012\u00020\u000b0\bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R)\u0010\f\u001a\u001a\u0012\u0006\u0012\u0004\u0018\u00010\u000b \u000e*\f\u0012\u0006\u0012\u0004\u0018\u00010\u000b\u0018\u00010\r0\r\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u0012R\u0017\u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\t0\r8F\u00a2\u0006\u0006\u001a\u0004\b\u0014\u0010\u0010R\u001a\u0010\u0015\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\t0\u00160\rX\u0082\u0004\u00a2\u0006\u0002\n\u0000R5\u0010\u0017\u001a&\u0012\f\u0012\n \u000e*\u0004\u0018\u00010\u00180\u0018 \u000e*\u0012\u0012\f\u0012\n \u000e*\u0004\u0018\u00010\u00180\u0018\u0018\u00010\r0\r\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0019\u0010\u0010R\u0017\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u000b0\r8F\u00a2\u0006\u0006\u001a\u0004\b\u001b\u0010\u0010R5\u0010\u001c\u001a&\u0012\f\u0012\n \u000e*\u0004\u0018\u00010\u000b0\u000b \u000e*\u0012\u0012\f\u0012\n \u000e*\u0004\u0018\u00010\u000b0\u000b\u0018\u00010\r0\r\u00a2\u0006\b\n\u0000\u001a\u0004\b\u001d\u0010\u0010R5\u0010\u001e\u001a&\u0012\f\u0012\n \u000e*\u0004\u0018\u00010\u000b0\u000b \u000e*\u0012\u0012\f\u0012\n \u000e*\u0004\u0018\u00010\u000b0\u000b\u0018\u00010\r0\r\u00a2\u0006\b\n\u0000\u001a\u0004\b\u001f\u0010\u0010R\u0016\u0010 \u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\t0\bX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u000e\u0010!\u001a\u00020\"X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020$X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u0082\u0002\u0004\n\u0002\b\u0019\u00a8\u00064"}, d2 = {"Lcom/example/android/trackmysleepquality/sleeptracker/SleepTrackerViewModel;", "Landroidx/lifecycle/AndroidViewModel;", "database", "Lcom/example/android/trackmysleepquality/database/SleepDatabaseDao;", "application", "Landroid/app/Application;", "(Lcom/example/android/trackmysleepquality/database/SleepDatabaseDao;Landroid/app/Application;)V", "_navigateToSleepQuality", "Landroidx/lifecycle/MutableLiveData;", "Lcom/example/android/trackmysleepquality/database/SleepNight;", "_showSnackbarEvent", "", "clearButtonVisible", "Landroidx/lifecycle/LiveData;", "kotlin.jvm.PlatformType", "getClearButtonVisible", "()Landroidx/lifecycle/LiveData;", "getDatabase", "()Lcom/example/android/trackmysleepquality/database/SleepDatabaseDao;", "navigateToSleepQuality", "getNavigateToSleepQuality", "nights", "", "nightsString", "Landroid/text/Spanned;", "getNightsString", "showSnackBarEvent", "getShowSnackBarEvent", "startButtonVisible", "getStartButtonVisible", "stopButtonVisible", "getStopButtonVisible", "tonight", "uiScope", "Lkotlinx/coroutines/CoroutineScope;", "viewModelJob", "Lkotlinx/coroutines/Job;", "clear", "", "(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "doneNavigating", "doneShowingSnackbar", "getTonightFromDatabase", "initializeTonight", "insert", "night", "(Lcom/example/android/trackmysleepquality/database/SleepNight;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "onClear", "onCleared", "onStartTracking", "onStopTracking", "update", "TrackMySleepQualityCoroutines-Starter_debug"})
 public final class SleepTrackerViewModel extends androidx.lifecycle.AndroidViewModel {
     private kotlinx.coroutines.Job viewModelJob;
+    
+    /**
+     * A [CoroutineScope] keeps track of all coroutines started by this ViewModel.
+     *
+     * Because we pass it [viewModelJob], any coroutine started in this uiScope can be cancelled
+     * by calling `viewModelJob.cancel()`
+     *
+     * By default, all coroutines started in uiScope will launch in [Dispatchers.Main] which is
+     * the main thread on Android. This is a sensible default because most coroutines started by
+     * a [ViewModel] update the UI after performing some processing.
+     */
     private final kotlinx.coroutines.CoroutineScope uiScope = null;
     private androidx.lifecycle.MutableLiveData<com.example.android.trackmysleepquality.database.SleepNight> tonight;
     private final androidx.lifecycle.LiveData<java.util.List<com.example.android.trackmysleepquality.database.SleepNight>> nights = null;
+    
+    /**
+     * Converted nights to Spanned for displaying.
+     */
     private final androidx.lifecycle.LiveData<android.text.Spanned> nightsString = null;
+    
+    /**
+     * If tonight has not been set, then the START button should be visible.
+     */
+    private final androidx.lifecycle.LiveData<java.lang.Boolean> startButtonVisible = null;
+    
+    /**
+     * If tonight has been set, then the STOP button should be visible.
+     */
+    private final androidx.lifecycle.LiveData<java.lang.Boolean> stopButtonVisible = null;
+    
+    /**
+     * If there are any nights in the database, show the CLEAR button.
+     */
+    private final androidx.lifecycle.LiveData<java.lang.Boolean> clearButtonVisible = null;
+    
+    /**
+     * Request a toast by setting this value to true.
+     *
+     * This is private because we don't want to expose setting this value to the Fragment.
+     */
+    private androidx.lifecycle.MutableLiveData<java.lang.Boolean> _showSnackbarEvent;
+    
+    /**
+     * Variable that tells the Fragment to navigate to a specific [SleepQualityFragment]
+     *
+     * This is private because we don't want to expose setting this value to the Fragment.
+     */
+    private final androidx.lifecycle.MutableLiveData<com.example.android.trackmysleepquality.database.SleepNight> _navigateToSleepQuality = null;
     @org.jetbrains.annotations.NotNull()
     private final com.example.android.trackmysleepquality.database.SleepDatabaseDao database = null;
     
@@ -19,26 +63,75 @@ public final class SleepTrackerViewModel extends androidx.lifecycle.AndroidViewM
         return null;
     }
     
-    public final void onStartTracking() {
-    }
-    
-    public final void onStopTracking() {
-    }
-    
-    public final void onClear() {
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.Object clear(@org.jetbrains.annotations.NotNull()
-    kotlin.coroutines.Continuation<? super kotlin.Unit> p0) {
+    public final androidx.lifecycle.LiveData<java.lang.Boolean> getStartButtonVisible() {
         return null;
     }
     
-    @java.lang.Override()
-    protected void onCleared() {
+    public final androidx.lifecycle.LiveData<java.lang.Boolean> getStopButtonVisible() {
+        return null;
+    }
+    
+    public final androidx.lifecycle.LiveData<java.lang.Boolean> getClearButtonVisible() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final androidx.lifecycle.LiveData<java.lang.Boolean> getShowSnackBarEvent() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final androidx.lifecycle.LiveData<com.example.android.trackmysleepquality.database.SleepNight> getNavigateToSleepQuality() {
+        return null;
+    }
+    
+    /**
+     * Call this immediately after calling `show()` on a toast.
+     *
+     * It will clear the toast request, so if the user rotates their phone it won't show a duplicate
+     * toast.
+     */
+    public final void doneShowingSnackbar() {
+    }
+    
+    /**
+     * Call this immediately after navigating to [SleepQualityFragment]
+     *
+     * It will clear the navigation request, so if the user rotates their phone it won't navigate
+     * twice.
+     */
+    public final void doneNavigating() {
     }
     
     private final void initializeTonight() {
+    }
+    
+    /**
+     * Executes when the START button is clicked.
+     */
+    public final void onStartTracking() {
+    }
+    
+    /**
+     * Executes when the STOP button is clicked.
+     */
+    public final void onStopTracking() {
+    }
+    
+    /**
+     * Executes when the CLEAR button is clicked.
+     */
+    public final void onClear() {
+    }
+    
+    /**
+     * Called when the ViewModel is dismantled.
+     * At this point, we want to cancel all coroutines;
+     * otherwise we end up with processes that have nowhere to return to
+     * using memory and resources.
+     */
+    @java.lang.Override()
+    protected void onCleared() {
     }
     
     @org.jetbrains.annotations.NotNull()
