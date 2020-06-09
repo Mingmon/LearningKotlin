@@ -35,13 +35,8 @@
         android:layout_height="match_parent"
         tools:context=".sleeptracker.SleepTrackerFragment">
 
-        <!-- Simplest way of displaying scrollable text and data. There is a
-             better and more efficient way to do this, and you will learn about
-             RecyclerView in a later lesson. -->
-
-        <!-- With data binding and LiveData, we can track the buttons' visibility states
-             from the ViewModel. The click handler is in the ViewModel as well, and
-             you can set it for the Views using this lambda pattern. -->
+        <!-- This lesson we will switch to RecyclerView to properly
+         display the sleep data-->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/sleep_list"
@@ -52,6 +47,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/stop_button"/>
 
+        <!-- With data binding and LiveData, we can track the buttons' visibility states
+             from the ViewModel. The click handler is in the ViewModel as well, and
+             you can set it for the Views using this lambda pattern. -->
 
         <Button
             android:id="@+id/start_button"
