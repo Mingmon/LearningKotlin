@@ -40,38 +40,37 @@
 32-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:25:9-54
 33        android:supportsRtl="true"
 33-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:26:9-35
-34        android:testOnly="true"
-35        android:theme="@style/AppTheme" >
-35-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:27:9-40
-36
-37        <!-- Screen locked to landscape for easier play -->
-38        <!-- configChanges attribute makes the following actions NOT cause a config change -->
-39        <!-- screenOrientation attribute sets the default animation -->
-40        <activity android:name="com.example.android.guesstheword.MainActivity" >
-40-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:33:9-40:20
-40-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:33:19-47
-41            <intent-filter>
-41-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:35:13-39:29
-42                <action android:name="android.intent.action.MAIN" />
-42-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:36:17-69
-42-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:36:25-66
-43
-44                <category android:name="android.intent.category.LAUNCHER" />
-44-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:38:17-77
-44-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:38:27-74
-45            </intent-filter>
-46        </activity>
-47
-48        <provider
-48-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Mingmon\.gradle\caches\transforms-2\files-2.1\57c4d4bf82dc0756d9843e8caf2e9199\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
-49            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-49-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Mingmon\.gradle\caches\transforms-2\files-2.1\57c4d4bf82dc0756d9843e8caf2e9199\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
-50            android:authorities="com.example.android.guesstheword.lifecycle-process"
-50-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Mingmon\.gradle\caches\transforms-2\files-2.1\57c4d4bf82dc0756d9843e8caf2e9199\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
-51            android:exported="false"
-51-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Mingmon\.gradle\caches\transforms-2\files-2.1\57c4d4bf82dc0756d9843e8caf2e9199\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
-52            android:multiprocess="true" />
-52-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Mingmon\.gradle\caches\transforms-2\files-2.1\57c4d4bf82dc0756d9843e8caf2e9199\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
-53    </application>
-54
-55</manifest>
+34        android:theme="@style/AppTheme" >
+34-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:27:9-40
+35
+36        <!-- Screen locked to landscape for easier play -->
+37        <!-- configChanges attribute makes the following actions NOT cause a config change -->
+38        <!-- screenOrientation attribute sets the default animation -->
+39        <activity android:name="com.example.android.guesstheword.MainActivity" >
+39-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:33:9-40:20
+39-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:33:19-47
+40            <intent-filter>
+40-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:35:13-39:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:36:17-69
+41-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:36:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:38:17-77
+43-->C:\Users\Mingmon\AndroidStudioProjects\kotlinn\GuessTheWord-Starter\src\main\AndroidManifest.xml:38:27-74
+44            </intent-filter>
+45        </activity>
+46
+47        <provider
+47-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Mingmon\.gradle\caches\transforms-2\files-2.1\57c4d4bf82dc0756d9843e8caf2e9199\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
+48            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+48-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Mingmon\.gradle\caches\transforms-2\files-2.1\57c4d4bf82dc0756d9843e8caf2e9199\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+49            android:authorities="com.example.android.guesstheword.lifecycle-process"
+49-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Mingmon\.gradle\caches\transforms-2\files-2.1\57c4d4bf82dc0756d9843e8caf2e9199\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
+50            android:exported="false"
+50-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Mingmon\.gradle\caches\transforms-2\files-2.1\57c4d4bf82dc0756d9843e8caf2e9199\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
+51            android:multiprocess="true" />
+51-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\Mingmon\.gradle\caches\transforms-2\files-2.1\57c4d4bf82dc0756d9843e8caf2e9199\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
+52    </application>
+53
+54</manifest>
