@@ -1,5 +1,5 @@
 rootProject.name='kotlinn'
-include ':aboutme', ':AndroidTriviaNavigation', ':DessertClicker-Starter', ':DessertClickerLogs', ':GuessTheWord-Starter', ':TrackMySleepQuality-Starter', ':TrackMySleepQualityCoroutines-Starter', ':RecyclerViewFundamentals-Starter', ':MarsRealEstate-Starter', ':DevBytes-starter'
+include ':aboutme', ':AndroidTriviaNavigation', ':DessertClicker-Starter', ':DessertClickerLogs', ':GuessTheWord-Starter', ':TrackMySleepQuality-Starter', ':TrackMySleepQualityCoroutines-Starter', ':RecyclerViewFundamentals-Starter', ':MarsRealEstate-Starter', ':DevBytes-starter', ':GDGFinder-Starter'
 include ':colormyviews'
 include ':AndroidTrivia-Starter'
 include ':AndroidTriviaFragment'
