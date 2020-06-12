@@ -21,7 +21,6 @@ import com.squareup.moshi.Json
 import kotlinx.android.parcel.Parcelize
 
 
-
 @Parcelize
 data class GdgChapter(
     @Json(name = "chapter_name") val name: String,
